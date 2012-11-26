@@ -1,0 +1,18 @@
+Gestion des demi-journées de Cocagne, fradeff@akademia.ch
+
+1. Le cocagnard est authentifié par Joomla!
+2. Le composant "hallo" le redirige sur les demies-journées, index.php
+3. Sécurité:
+3.1 On vérifie que la requête provient bien du serveur cocagne.ch
+3.2 On vérifie que l'utilisateur existe bien dans la base
+4. L'utilisateur qui a rempli le formulaire est redirigé sur confirm.php
+5. Il complète et soumet -> insert.php
+ 
+
+En tout temps, l'utilisateur peut voir ses demi-journées sur mesinscriptions.php
+
+A faire: adapter les tables MySQL (fichiers SQL dans répertoire sql), changer XXX par vos valeurs
+
+Explications sur le système des demi-journées: voir sur le site de Cocagne:
+http://www.cocagne.ch/cms/comment-ca-marche/cahier-des-charges-du-cooperateur-trice
+http://www.cocagne.ch/cms/le-coin-des-cooperateurstrices/regles-des-demi-journees

@@ -1,0 +1,7 @@
+cakePHP admin pour Cocagne, fradeff@akademia.ch
+
+required: AMP, cakePHP
+
+IMPORTANT: protect with htaccess!!!
+
+Note: le fichier sql comprend aussi les tables du cms Joomla!, si on ne les veut pas prendre les sql pour chaque outil

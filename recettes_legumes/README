@@ -1,0 +1,15 @@
+Gestion des recettes et de l'encyclopédie des légumes, fradeff@akademia.ch
+
+2 composants joomla liés:  
+- les recettes de cuisine
+- l'encyclopédie des légumes
+
+Lorsqu'une nouvelle recette est entrée, 
+automatiquement dans les légumes correspondants dans les ingrédients
+on aura un lien sur la nouvelle recette
+
+Changer les XXX avec vos paramètres
+
+Voir sur le site de Cocagne: 
+http://www.cocagne.ch/cms/legumes (cliquer sur un légume pour voir les recettes liées)
+http://www.cocagne.ch/cms/component/recettes/?view=recettes&Itemid=194
