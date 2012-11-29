@@ -27,7 +27,8 @@ Gestion des recettes et de l'encyclopédie des légumes, soit
 2 composants joomla liés:  
 - les recettes de cuisine
 - l'encyclopédie des légumes
-- 
+
+
 @package cocagne
 @version $Id: 1.10
 @author Fred Radeff fradeff@akademia.ch
