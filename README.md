@@ -28,6 +28,8 @@ Gestion des recettes et de l'encyclopédie des légumes, soit
 - les recettes de cuisine
 - l'encyclopédie des légumes
 
+Voir aussi: 
+gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zpartakov/CakePHPrecoltes 
 
 @gitpackage cocagne
 
