@@ -5,7 +5,7 @@ Ce dépôt comprend les outils informatiques de gestion de la coopérative agric
 
 Tous ces outils sont libres, développés sous linux
 
-Ils demandent AMP (Apache, MySQL et PHP) et cakePHP; ils sont faits pour le CMS Joomla! mais devraient pouvoir assez facilement s'adapter à un autre CMS
+Ils demandent AMP (Apache, MySQL et PHP) et cakePHP (required: cakePHP 1.3 https://github.com/cakephp/cakephp/tags); ils sont faits pour le CMS Joomla! mais devraient pouvoir assez facilement s'adapter à un autre CMS
 
 Liste des outils
 
