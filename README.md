@@ -27,3 +27,10 @@ Gestion des recettes et de l'encyclopédie des légumes, soit
 2 composants joomla liés:  
 - les recettes de cuisine
 - l'encyclopédie des légumes
+- 
+@package cocagne
+@version $Id: 1.10
+@author Fred Radeff fradeff@akademia.ch
+@copyright (c) 2012 Fred Radeff, akademia.ch
+@license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+@required: cakePHP 1.3 https://github.com/cakephp/cakephp/tags
