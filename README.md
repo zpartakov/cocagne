@@ -35,9 +35,7 @@ gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zparta
 
 @version $Id: 1.10
 
-@author Fred Radeff fradeff@akademia.ch
-
-@copyright (c) 2012 Fred Radeff, akademia.ch
+@author Zpartakov zpartakov@akademia.ch
 
 @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
