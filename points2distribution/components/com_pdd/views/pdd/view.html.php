@@ -75,10 +75,10 @@ $i++;
 #echo $query;
 echo "</table>";
 if(strlen($utilisateur)<1) {
-echo "<hr /><em>Pour voir le détail des points de distribution, il faut <a href=\"/cms/login-logout\">XXXvous enregistrer</a></em>";
+echo "<hr /><em>Pour voir le détail des points de distribution, il faut <a href=\"/cms/login-logout\">vous enregistrer</a></em>";
 } else {
 echo '
-<hr /><a href="XXX">XXXCahier de charge de la/du responsable de point de distribution</a></p>
+<hr /><a href="/cms/comment-ca-marche/cahier-des-charges-du-cooperateur-trice">Cahier de charge de la/du responsable de point de distribution</a></p>
 ';
 }
     }
