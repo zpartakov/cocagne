@@ -1,26 +1,16 @@
-<?php 
-
-/*
- * this joomla component requires joomla authentication 
- * and redirect to an url with the email of the authenticated user
- * 
- * todo: add a hash key
- */
-
-// no direct access
+<?php // no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
+<h1><?php echo $this->greeting; ?></h1>
  
 <?
-/*
- * get the infos from logged joomla user
- */
+#echo phpinfo(); exit;
+#tests radeff 2008.09.30
 $user =& JFactory::getUser();
+# echo "<p>Your name is {$user->name}<BR>, your email is {$user->email}<BR>your username is {$user->username}<BR>registration {$user->registerDate}<BR>last visit {$user->lastvisitDate}<BR>id {$user->id}</p>";
+#  echo "<p>Your usertype is {$user->usertype} which has a group id of {$user->gid}.</p>";
  
 $utilisateur=$user->username;
 $uid=$user->id;
-/*
- * get task from url variable
- */
 $latache=$_GET['latache'];
 //echo "Utilisateur: " .$utilisateur; exit;
 if(isset($latache)) {
