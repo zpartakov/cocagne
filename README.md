@@ -25,11 +25,12 @@ un outil pour la gestion des points de distribution, affichant des informations 
 Gestion des recettes et de l'encyclopédie des légumes, soit
 
 2 composants joomla liés:  
-- les recettes de cuisine
-- l'encyclopédie des légumes
+- les recettes de cuisine: un composant pour gérer des recettes de cuisine
+- l'encyclopédie des légumes: lié au composant précédent, une base de données avec des informations sur les légumes proposés par la coopérative
+
 
 Voir aussi: 
-gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zpartakov/CakePHPrecoltes 
+gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zpartakov/CakePHPrecoltes
 
 @gitpackage cocagne
 
