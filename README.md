@@ -34,7 +34,7 @@ gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zparta
 
 @gitpackage cocagne
 
-@version $Id: 1.10
+@version $Id: 1.11
 
 @author Fred Radeff <fradeff@akademia.ch>
 
