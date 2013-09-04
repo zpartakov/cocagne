@@ -1,2 +1,4 @@
 this joomla component requires joomla authentication 
 and redirect to an url with the email of the authenticated user
+
+install it by hand (FTP) to your joomla as there is no xml or zip to direct upload
