@@ -1,4 +1,3 @@
-
 <?php
 /**
 * @version        $Id: correction.ctp v1.0 28.05.2010 04:53:58 CEST $
@@ -77,36 +76,37 @@ while($i<mysql_num_rows($sql)){
 		#qui est inscrit?	
 		$i2=0;
 		while($i2<mysql_num_rows($sql2)){
-			$username="SELECT * FROM jos_users WHERE username LIKE '" .mysql_result($sql2,$i2,'user') ."'";
+			$username="SELECT * FROM jos_users WHERE username LIKE '" 
+			.mysql_result($sql2,$i2,'user') ."'";
 			$usernameQ=mysql_query($username);
 			if(!$usernameQ) {
 				echo "<br>SQL error person:<br>" .mysql_error() ."<br>";
 			} 	
 			$username=mysql_result($usernameQ,0,'name');
 			$useremail=mysql_result($usernameQ,0,'email');
-
-/*			$qui.= "<li><a title=\"envoyer un email\" href=\"mailto:" .$useremail ."\">" .$username ."</a> - " .mysql_result($sql2,$i2,'npers') ." - ".mysql_result($sql2,$i2,'rem') ."</li>";*/
-
-			$qui.= "<table>
-						<tr>
-							<td>
-							" .$username ." (" .mysql_result($sql2,$i2,'npers') .")";
-							$rem=utf8_decode(mysql_result($sql2,$i2,'rem'));
-							if(strlen($rem)>0) {
-								$qui .="<ul><li><div style=\"font-size: smaller;\">" .$rem ."</div></li></ul>";
-							}
-							$qui.= "
-							</td>
-							<td>
-							<a href=\"".RACINEDIR ."/jos_demiejournees_details/edit/" .mysql_result($sql2,$i2,'id') ."\">";
-							$qui.= $html->image('b_edit.png', array("alt"=>"Modifier","title"=>"Modifier"));
-							$qui.= "</a>";
-							$qui.= "&nbsp;&nbsp;<a onclick=\"javascript:return confirm('Confirmer la suppression ?')\" href=\"" .RACINEDIR ."/jos_demiejournees_details/delete/" .mysql_result($sql2,$i2,'id') ."\">";
-							$qui.= $html->image('b_drop.png', array("alt"=>"Effacer","title"=>"Effacer"));
-							$qui.= "</a></td>	
-					</tr>
-				</table>
-						";
+			$qui.= "
+			<table>
+				<tr>
+					<td>
+					" .$username ." (" .mysql_result($sql2,$i2,'npers') .")";
+					$rem=utf8_decode(mysql_result($sql2,$i2,'rem'));
+					if(strlen($rem)>0) {
+						$qui .="<ul><li><div style=\"font-size: smaller;\">" .$rem ."</div></li></ul>";
+					}
+					$qui.= "
+				</td>
+				<td>
+					<a href=\"".RACINEDIR ."/jos_demiejournees_details/edit/" 
+					.mysql_result($sql2,$i2,'id') ."\">";
+					$qui.= $html->image('b_edit.png', array("alt"=>"Modifier","title"=>"Modifier"));
+					$qui.= "</a>";
+					$qui.= "&nbsp;&nbsp;<a onclick=\"javascript:return confirm('Confirmer la suppression ?')\" href=\"" .RACINEDIR ."/jos_demiejournees_details/delete/" .mysql_result($sql2,$i2,'id') ."\">";
+					$qui.= $html->image('b_drop.png', array("alt"=>"Effacer","title"=>"Effacer"));
+					$qui.= "</a>
+					</td>	
+				</tr>
+			</table>
+					";
 $npers=$npers+mysql_result($sql2,$i2,'npers');
 			$i2++;
 			}
@@ -122,10 +122,7 @@ if(preg_match("/08:00:00$/" ,lheure(mysql_result($sql,$i,'date')))) {
 			colorier($npersprevues, $npers);
 			echo "\">";
 			placesprevues($idjour,$npersprevues);//nb places avec lien sur édition app_controller.php
-#			if($npersprevues>0&&$npers>0) {
-			if($npersprevues>0&&$npers>0) {
-				echo "<div class=\"inscrits\">" .$qui ."</div>"; //on affiche le/s Cocagnard/e/s inscrit/e/s
-			}
+			echo "<div class=\"inscrits\">" .$qui ."</div>"; //on affiche le/s Cocagnard/e/s inscrit/e/s
 			if($npers>0) {
 			echo "<strong>Total: " .$npers ."</strong>";
 		}
@@ -137,21 +134,20 @@ if(preg_match("/08:00:00$/" ,lheure(mysql_result($sql,$i,'date')))) {
 } elseif(preg_match("/1[4-7]:00:00/" ,lheure(mysql_result($sql,$i,'date')))) {
 #	echo "<br>new col";
 			//calcul place
-			//calcul place
 			echo "<td style=\"background-color: ";
 			colorier($npersprevues, $npers);
 			echo "\">";			//nb places avec lien sur édition
 			placesprevues($idjour,$npersprevues);
-			if($npersprevues>0&&$npers>0) {
-				echo "<div class=\"inscrits\">" .$qui ."</div>"; //on affiche le/s Cocagnard/e/s inscrit/e/s
-			}
+			echo "<div class=\"inscrits\">" .$qui ."</div>"; //on affiche le/s Cocagnard/e/s inscrit/e/s
 			if($npers>0) {
 			echo "<strong>Total: " .$npers ."</strong>";
 		}
 		
 		//ajout nouvel enregistrement//
-		echo "&nbsp;&nbsp;<a href=\"".RACINEDIR ."/jos_demiejournees_details/nouveau?date=" .mysql_result($sql,$i,'date') ."\">";
-							echo $html->image('b_insrow.png', array("alt"=>"Ajouter une inscription","title"=>"Ajouter une inscription"));
+		echo "&nbsp;&nbsp;<a href=\"".RACINEDIR ."/jos_demiejournees_details/nouveau?date=" 
+		.mysql_result($sql,$i,'date') ."\">";
+							echo $html->image('b_insrow.png', 
+									array("alt"=>"Ajouter une inscription","title"=>"Ajouter une inscription"));
 							echo "</a>";
 			echo "</td>";
 
@@ -169,8 +165,10 @@ if(preg_match("/08:00:00$/" ,lheure(mysql_result($sql,$i,'date')))) {
 			if($npers>0) {
 			echo "<strong>Total: " .$npers ."</strong>";
 		}
-				echo "&nbsp;&nbsp;<a href=\"".RACINEDIR ."/jos_demiejournees_details/nouveau?date=" .mysql_result($sql,$i,'date') ."\">";
-							echo $html->image('b_insrow.png', array("alt"=>"Ajouter une inscription","title"=>"Ajouter une inscription"));
+				echo "&nbsp;&nbsp;<a href=\"".RACINEDIR ."/jos_demiejournees_details/nouveau?date=" 
+				.mysql_result($sql,$i,'date') ."\">";
+							echo $html->image('b_insrow.png', 
+									array("alt"=>"Ajouter une inscription","title"=>"Ajouter une inscription"));
 							echo "</a>";
 			echo "</td>";
 

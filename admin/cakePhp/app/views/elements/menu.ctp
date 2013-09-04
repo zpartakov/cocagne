@@ -4,14 +4,15 @@
 	<li>
 		<a href="http://<? echo $_SERVER["HTTP_HOST"].RACINEDIR;?>">Accueil admin</a>
 		<ul class="sousMenu">
-			<li><a href="/">XXX main website</a></li>
-			<li><a href="XXX">Administration hébergeur</a></li>
-			<li><a href="XXX">@webmail</a></li>
+			<li><a href="/">cocagne.ch</a></li>
+			<li><a href="http://admin.cocagne.ch/">Administration Infomaniak</a></li>
+			<li><a href="http://webmail.cocagne.ch/">@webmail</a></li>
+			<li><a href="/test/">cocagne.ch site de test</a></li>
 			<li><a href="/cms/administrator/">Administration Joomla!</a></li>
-			<li><a href="/cms/proposition-darticle">Nouvel article Joomla!</a></li>
-			<li><a href="/cms/modifications-du-site">Modifications du site</a></li>
-			<li><a href="/cms/aide">Aide</a></li>
-			<li><a href="/limesurvey/admin/">Formulaires (limesurvey)</a></li>
+			<li><a href="http://www.cocagne.ch/cms/proposition-darticle">Nouvel article Joomla!</a></li>
+			<li><a href="http://www.cocagne.ch/cms/modifications-du-site">Modifications du site</a></li>
+			<li><a href="http://www.cocagne.ch/cms/aide">Aide</a></li>
+			<li><a href="http://www.cocagne.ch/limesurvey/admin/">Formulaires (lime)</a></li>
 			<li><a href="<? echo RACINEDIR;?>/pages/emails">emails</a></li>
 			<li><a href="<? echo RACINEDIR;?>/pages/infosconfidentielles">Informations confidentielles</a></li>
 		</ul>

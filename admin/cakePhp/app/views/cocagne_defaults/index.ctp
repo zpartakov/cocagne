@@ -22,7 +22,7 @@
 		<td><?php echo $cocagneDefault['CocagneDefault']['id']; ?>&nbsp;</td>
 		<td><?php echo $cocagneDefault['CocagneDefault']['lib']; ?>&nbsp;</td>
 		<td><?php echo $cocagneDefault['CocagneDefault']['n']; ?>&nbsp;</td>
-		<td><?php echo utf8_decode($cocagneDefault['CocagneDefault']['rem1']); ?>&nbsp;</td>
+		<td><?php echo $cocagneDefault['CocagneDefault']['rem1']; ?>&nbsp;</td>
 		<td><?php echo $cocagneDefault['CocagneDefault']['rem2']; ?>&nbsp;</td>
 		<td><?php echo $cocagneDefault['CocagneDefault']['datemod']; ?>&nbsp;</td>
 		<td class="actions">

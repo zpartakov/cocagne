@@ -117,15 +117,18 @@ if(!$lastDate){
 }
 
 #echo $lastDateN; exit;
-if($lastDateN<1){
+//if($lastDateN<1){
 	$aujourdhui=date("U");
 	$startday=$aujourdhui+(24*3600);
 	$test=1;
-} else {
+//} 
+
+
+/*else {
 	#echo "<br>last row: " .($lastDateN-1) ."<br>"; //tests
 	#$startday=mysql_result($lastDate,($lastDateN-1),'date');
 	$startday=mysql_result($lastDate,0,'date');
-	#echo "startday: " .$startday; exit;
+	echo "startday: " .$startday; exit;
 	$la_date    = explode(' ', $startday); // on decompose la date SQL
 	$heure_sql= explode(':',$la_date[1]); // On prend la partie heure
 	$heure = $heure_sql[0]; // La variable de l'heure
@@ -140,8 +143,8 @@ if($lastDateN<1){
 	#$startday=strftime("U",$startday);
 	$startday=$startday+(12*3600); //on ajoute 12h à 18h->lendemain à 8h
 	$test=0;
-}
-#echo $startday; exit;
+}*/
+//echo "startday: ".date("Y-m-d",$startday) ." - ladate: ".$la_date; exit;
 ################ begin insertion #############
 $i=0;
 while($i<$njag){

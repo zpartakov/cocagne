@@ -1,5 +1,6 @@
 <div class="cocagneRecettes index">
 	<h2><?php __('Cocagne Recettes');?></h2>
+		<li><?php echo $this->Html->link(__('New Cocagne Recette', true), array('action' => 'add')); ?></li>
 	<!-- begin search form -->
  <table>
 	 <tr>
