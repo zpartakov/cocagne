@@ -42,7 +42,7 @@ $referent=$_SERVER["HTTP_REFERER"];
  * 1st line: //put here your DNS, eg. http:\/\/www\.cocagne\.ch\ - be carefull escaping all special chars!
  */
 if(preg_match("/^XXX/",$referent)){ 
-$dbHostname = "XXX";                       //your mysql webserver name, usually mysql.les-jardins-de-cocagne.ch
+$dbHostname = "XXX";                       //your mysql webserver name, usually localhost
 #echo $dbHostname; exit;
 } else {
 $dbHostname = "localhost";
