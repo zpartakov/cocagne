@@ -33,16 +33,24 @@ echo "Voici vos demi-journées prévues<br>";
  
 
 	$aujourdhui=date("Y-m-d");
+#$cocagnardes.= "date:";
+	#$cocagnardes.= $thisDate;
+#WHERE `date` >='" .$aujourdhui ."'
+#AND user LIKE '".$utilisateur ."
+#' ORDER BY user";
+	
 	
 $sqlUser="SELECT *
 FROM `jos_demiejournees_details`
 WHERE `date` >= '" .$aujourdhui ."'
 AND `user` LIKE '".$utilisateur ."'
  ORDER BY `date`";
-
+#	echo $sqlUser ."<br>"; #tests
+	# exit;
 	$sqlUser=mysql_query($sqlUser);
 	$sqlUserN=mysql_num_rows($sqlUser);
-
+#echo $sqlUserN;#tests
+# exit;
 echo "<br><a href=\"http://" .$_SERVER["HTTP_HOST"] ."/cms/static/demijournees/index.php?utilisateur=" .$utilisateur ."\">Retour aux inscriptions</a> | <A href=\"javascript:window.print()\">Imprimer mes inscriptions</A><br>";
 	
 if($sqlUserN>0) {
