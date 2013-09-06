@@ -1,6 +1,7 @@
 <?php
 // Désactiver le rapport d'erreurs en prod
 error_reporting(0);
+//error_reporting(E_ALL ^ E_NOTICE);
 ###################################
 #DON'T CHANGE ANYTHING BELOW THIS LINE, UNLESS YOU KNOW WHAT YOU'RE DOING!!!!
 ###################################

@@ -1,23 +1,37 @@
-<?
+<?php
 /**
- * Various useful fonctions for site cocagne
+ * Various useful fonctions for site ergolangue
  */
  /* Don't change anything below this line                                                        */                                                   
 
 function connect_db()
 	{
-		$login= "XXX";                              // user name for you database
-$pass= "XXX";                             // pass word to the database if you dont have a password 
-$database_name="XXX";                     //name of the database
+		$login= "username";                              // username for you database
+$pass= "password";                             // password to the database if you dont have a password 
+$database_name="database_name";                     //name of the database
 		
 	#global $pass,$login;
 $referent=$_SERVER["HTTP_HOST"];
 if(preg_match("/^localhost$/",$referent)){
 $dbHostname = "localhost";
 } else {
-$dbHostname = "XXX";                       //your mysql webserver name
+$dbHostname = "xxxdbHostname";                       //your mysql webserver name, usually mysql.les-jardins-de-cocagne.ch
 }
+/*
+echo "host: " .$_SERVER["HTTP_HOST"]; 
+echo "<br>";
+echo "referer: " .$_SERVER["HTTP_REFERER"];
+echo "<br>";
+echo "dbHostname " .$dbHostname;
+echo "<br>";
 
+echo "<br>";
+echo "database_name=" .$database_name;
+
+exit;*/
+/*echo "pass: " .$pass;
+echo "<br>";
+echo "login: " .$login;*/
 	$db=mysql_connect($dbHostname,$login,$pass) or  die("Unable  to  select  database");
 		
 	return $db;
@@ -287,12 +301,13 @@ function datefr_hour($date_sql){
 
 # une fonction pour verifier d'ou vient la requete: on éjecte les pirates qui viendraient d'ailleurs
 function checkserver() {
-	$referent=$_SERVER["HTTP_HOST"];
-if(!preg_match("/^XXX$/",$referent)){ //your dns, eg XXX_your_DNS
-	if(!preg_match("/^XXX_your_DNS$/",$referent)){
-			echo "Sorry, your request must belongs within our main domain server!"; exit;
-}}
-
+/*	$referent=$_SERVER["HTTP_HOST"];
+if(!preg_match("/^www.cocagne.ch$/",$referent)){
+	if(!preg_match("/^www.cocagne.ch$/",$referent)){
+	if(!preg_match("/^129.194.18.217$/",$referent)){
+		echo "Sorry, your request must belongs within our main domain server!"; exit;
+}}}
+*/
 }
 
 # verifie si l'utilisateur est autorise dans la base
@@ -305,7 +320,7 @@ function checkutilisateur($utilisateur) {
 	$checkUser=mysql_query($sql);
 	if(mysql_num_rows($checkUser)!=1) {
 		echo "Cet utilisateur n'est pas autorisé!";
-	echo '<br />Veuillez vous <a href="http://XXX_your_DNS/cms/login-logout">enregistrer</a>';
+	echo '<br />Veuillez vous <a href="http://www.cocagne.ch/cms/login-logout">enregistrer</a>';
 		exit;
 	}
 	#ok l'utilisateur est bien enregistré, on peut continuer	

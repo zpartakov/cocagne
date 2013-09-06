@@ -10,7 +10,7 @@ checkutilisateur($utilisateur);
 
 #get the user name
 $sql="SELECT *
-FROM `jos_users`
+FROM `".$table_joomla_users."`
 WHERE `username` LIKE '" .$utilisateur ."'";
 $utilisateurName=mysql_result($checkUser,0,'name');
 
