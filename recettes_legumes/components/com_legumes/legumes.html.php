@@ -26,7 +26,7 @@ $ligne=1; $i=0; $test=0;
 			if($ligne==1) {
 				echo "<tr>";
 				}
-			echo '<td class="tdlegumes"><a href="' .$link .'">' .$row->legume .'<br /><img src="http://XXX/cms/images/stories/legumes/th_' .$row->id .'.jpg" widh="50" border="0"><br />';
+			echo '<td class="tdlegumes"><a href="' .$link .'">' .$row->legume .'<br /><img src="http://www.cocagne.ch/cms/images/stories/legumes/th_' .$row->id .'.jpg" widh="50" border="0"><br />';
 			echo '</a></td>';
 			if(($ligne/$numcols==intval($ligne/$numcols))||$ligne==$max) {
 				echo "</tr><tr><td colspan=\"" .$numcols ."\">&nbsp;</td></tr><tr>";
@@ -57,7 +57,7 @@ border: thin dashed;
 
          <td colspan="2">
             <h1><?php echo $lelegume;?></h1>
-         <img class="imagelegume" src="/XXX/cms/images/stories/legumes/<?php echo $legume->id; ?>.jpg"></td>
+         <img class="imagelegume" src="http://www.cocagne.ch/cms/images/stories/legumes/<?php echo $legume->id; ?>.jpg"></td>
       </tr>
 
       
@@ -249,6 +249,9 @@ echo nl2br($chaine);?></textarea>
 $lelegume=preg_replace("/'/","%",$lelegume);
 $lelegume=preg_replace("/-/","%",$lelegume);
 $lelegume=preg_replace("/ /","%",$lelegume);
+/*
+ * cas particulier: ail d'ours, remplacer l'apostrophe
+ */
 	  	if($legume->id==1) {
 $lelegume="ail%ours";	
 }
@@ -256,7 +259,27 @@ $lelegume="ail%ours";
     `titre` LIKE '%" .$lelegume ."%' OR 
    `ingredients` LIKE '%" .$lelegume ."%' OR 
    `preparation` LIKE '%" .$lelegume ."%'";
-#echo $query;
+   
+   /*
+    * cas particulier: rave, incluse dans colrave et betterave
+    */
+   if($legume->id==93){
+$query="
+ SELECT * FROM cocagne_recettes 
+ WHERE 
+ (`titre` LIKE '%Rave%' 
+ OR `ingredients` LIKE '%Rave%' 
+ OR `preparation` LIKE '%Rave%') 
+ AND (`titre` NOT LIKE '%betterave%' 
+ AND `ingredients` NOT LIKE '%betterave%' 
+ AND `preparation` NOT LIKE '%betterave%') 
+ AND (`titre` NOT LIKE '%colrave%' 
+ AND `ingredients` NOT LIKE '%colrave%' 
+ AND `preparation` NOT LIKE '%colrave%') 
+";
+
+   }   
+//echo $query;
       $sql=mysql_query($query);
             if(!$sql) {
          echo "SQL error: " .mysql_error() ."<br>exiting process"; exit;
