@@ -138,7 +138,7 @@ if($id) {
       <?
 $nbcol=2;
 $letexte= "";
-$path="/XXX/images/stories/recettes/" .mysql_result($sql,0,'id') ."/";
+$path="/home/www/5d627f3a1db67c4ae1d991552c9bba6a/web/cms/images/stories/recettes/" .mysql_result($sql,0,'id') ."/";
 #echo $path;
 if(file_exists($path)) {
 	$fd=dir($path);
@@ -188,6 +188,15 @@ echo "<h2>Ingrédients</h2><em>" .$ingredients ."</em><br />";
         $link = JRoute::_('component/recettes/?view=recettes');
 
   echo '<br /><center><a href="'.$link.'">Retour aux recettes</a></center>';
+  
+  ?>
+<p style="font-size: smaller">Recette Jardins de Cocagne / cocagne.ch, publiée sous 
+<img src="http://www.cocagne.ch/cms/images/_copyleft.png" style="width: 20px; vertical-align: middle"> licence libre.<br />
+Vous pouvez reproduire cette recette, à condition de la recopier intégralement, 
+de mentionner la source <a href="http://cocagne.ch/recetttes/">http://cocagne.ch/recetttes/</a> 
+et de la partager dans les mêmes conditions.</p>
+  <?php 
+  
 } elseif($chercher) {
 ####### moteur de recherche ########
 $chercher=preg_replace("/'/","%",$chercher);
