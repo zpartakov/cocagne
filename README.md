@@ -31,6 +31,7 @@ Gestion des recettes et de l'encyclopédie des légumes, soit
 
 Voir aussi: 
 gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zpartakov/CakePHPrecoltes
+Logiciel de gestion pour une coopérative d'agriculture contractuelle de proximité (ACP) https://github.com/zpartakov/cakeACP - une nouvelle version avec authentification incluse
 
 @gitpackage cocagne
 
@@ -40,4 +41,7 @@ gestion de cultures / récoltes agricoles en cakePHP : https://github.com/zparta
 
 @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
 
-@required: cakePHP 1.3 https://github.com/cakephp/cakephp/tags
+@required: 
+AMP
+cakePHP 1.3 https://github.com/cakephp/cakephp/tags 
+alaxos cakephp plugin http://www.alaxos.ch/blaxos/pages/view/plugin_alaxos
